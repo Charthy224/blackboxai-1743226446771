@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Visualizer canvas */
+#visualizer {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 0.5rem;
+}
+
+/* Instrument selection */
+.instrument-selected {
+  @apply ring-2 ring-blue-500;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #instrument-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
