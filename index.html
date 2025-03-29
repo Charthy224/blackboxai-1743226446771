@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Instrument App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body class="bg-gray-900 text-white font-['Poppins']">
+  <main class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-3 gap-4 mb-8" id="instrument-grid">
+      <!-- Instrument buttons will be added here -->
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg p-6">
+      <canvas id="visualizer" class="w-full h-32 mb-4"></canvas>
+      <button id="record-btn" class="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full">
+        Record
+      </button>
+    </div>
+    
+    <div class="mt-8 hidden" id="playback-controls">
+      <audio controls id="audio-player"></audio>
+      <button id="export-btn" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded mt-2">
+        Export MP3
+      </button>
+    </div>
+  </main>
+  
+  <script src="src/js/app.js" type="module"></script>
+</body>
+</html>
